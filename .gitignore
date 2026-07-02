@@ -1,0 +1,12 @@
+*.pyc
+__pycache__/
+*.egg-info/
+dist/
+build/
+*.html
+!gitstat/templates/*.html
+*.pdf
+*.log
+.env
+.venv/
+venv/

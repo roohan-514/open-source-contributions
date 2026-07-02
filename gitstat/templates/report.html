@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{FULL_NAME}} — GitStat Report</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    background: #0d1117; color: #c9d1d9; line-height: 1.6; padding: 24px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+  header {
+    text-align: center; padding: 40px 20px; border-bottom: 1px solid #30363d; margin-bottom: 32px;
+  }
+  header h1 { font-size: 2rem; color: #58a6ff; margin-bottom: 8px; }
+  header p { color: #8b949e; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+  header a { color: #58a6ff; text-decoration: none; }
+  header a:hover { text-decoration: underline; }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px; margin-bottom: 32px;
+  }
+  .stat-card {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 20px; text-align: center;
+  }
+  .stat-card .stat-value { font-size: 1.8rem; font-weight: 700; color: #58a6ff; }
+  .stat-card .stat-label { font-size: 0.85rem; color: #8b949e; margin-top: 4px; }
+  .section {
+    background: #161b22; border: 1px solid #30363d; border-radius: 8px;
+    padding: 24px; margin-bottom: 24px;
+  }
+  .section h2 { font-size: 1.3rem; color: #f0f6fc; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid #30363d; }
+  .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+  .info-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 0.9rem; }
+  .info-item .label { color: #8b949e; }
+  .info-item .value { color: #f0f6fc; font-weight: 500; }
+  .lang-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .lang-name { width: 100px; font-size: 0.85rem; color: #c9d1d9; text-align: right; }
+  .lang-bar-track { flex: 1; height: 12px; background: #21262d; border-radius: 6px; overflow: hidden; }
+  .lang-bar-fill { height: 100%; border-radius: 6px; transition: width 0.6s ease; }
+  .lang-pct { width: 48px; font-size: 0.8rem; color: #8b949e; }
+  .lang-labels { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
+  .lang-label { display: flex; align-items: center; gap: 6px; font-size: 0.85rem; color: #c9d1d9; }
+  .lang-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+  table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  th { text-align: left; padding: 10px 8px; color: #8b949e; border-bottom: 2px solid #30363d; font-weight: 600; }
+  td { padding: 10px 8px; border-bottom: 1px solid #21262d; }
+  tr:hover td { background: #1c2128; }
+  code { background: #21262d; padding: 2px 6px; border-radius: 4px; font-size: 0.8rem; color: #f0f6fc; }
+  .avatar { width: 24px; height: 24px; border-radius: 50%; vertical-align: middle; margin-right: 8px; }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .topic-tag {
+    display: inline-block; background: #1f2937; color: #58a6ff;
+    padding: 4px 12px; border-radius: 16px; font-size: 0.8rem;
+    margin: 4px 4px 0 0; border: 1px solid #30363d;
+  }
+  footer { text-align: center; color: #484f58; font-size: 0.8rem; padding: 24px 0; }
+  .badge { display: inline-block; padding: 4px 10px; border-radius: 12px; font-size: 0.7rem; font-weight: 600; margin-left: 8px; }
+  .badge-green { background: #1b3a2d; color: #7ee787; }
+  .badge-yellow { background: #3d2e00; color: #d29922; }
+  .badge-red { background: #3d1117; color: #f85149; }
+  @media (max-width: 600px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .lang-name { width: 70px; font-size: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <h1>📊 {{FULL_NAME}}</h1>
+    <p>{{DESCRIPTION}}</p>
+    <p><a href="{{REPO_URL}}">{{REPO_URL}}</a></p>
+    <div style="margin-top: 12px;">{{TOPICS}}</div>
+  </header>
+
+  <div class="stats-grid">
+    <div class="stat-card"><div class="stat-value">{{STARS}}</div><div class="stat-label">⭐ Stars</div></div>
+    <div class="stat-card"><div class="stat-value">{{FORKS}}</div><div class="stat-label">🍴 Forks</div></div>
+    <div class="stat-card"><div class="stat-value">{{OPEN_ISSUES}}</div><div class="stat-label">❗ Open Issues</div></div>
+    <div class="stat-card"><div class="stat-value">{{WATCHERS}}</div><div class="stat-label">👀 Watchers</div></div>
+    <div class="stat-card"><div class="stat-value">{{TOTAL_CONTRIBUTORS}}</div><div class="stat-label">🧑‍💻 Contributors</div></div>
+    <div class="stat-card"><div class="stat-value">{{TOTAL_COMMITS_SHOWN}}</div><div class="stat-label">📝 Recent Commits</div></div>
+  </div>
+
+  <div class="section">
+    <h2>Repository Info</h2>
+    <div class="info-grid">
+      <div class="info-item"><span class="label">License</span><span class="value">{{LICENSE}}</span></div>
+      <div class="info-item"><span class="label">Primary Language</span><span class="value">{{LANGUAGE}}</span></div>
+      <div class="info-item"><span class="label">Default Branch</span><span class="value">{{DEFAULT_BRANCH}}</span></div>
+      <div class="info-item"><span class="label">Size</span><span class="value">{{SIZE_KB}} KB</span></div>
+      <div class="info-item"><span class="label">Created</span><span class="value">{{CREATED_AT}}</span></div>
+      <div class="info-item"><span class="label">Last Updated</span><span class="value">{{UPDATED_AT}}</span></div>
+      <div class="info-item"><span class="label">Last Push</span><span class="value">{{PUSHED_AT}}</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Languages</h2>
+    {{LANG_BARS}}
+    <div class="lang-labels">{{LANG_LABELS}}</div>
+  </div>
+
+  <div class="section">
+    <h2>Top Contributors</h2>
+    <table>
+      <thead><tr><th>#</th><th>Contributor</th><th>Contributions</th></tr></thead>
+      <tbody>{{CONTRIB_ROWS}}</tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <h2>Recent Commits</h2>
+    <table>
+      <thead><tr><th>SHA</th><th>Author</th><th>Message</th><th>Date</th></tr></thead>
+      <tbody>{{COMMIT_ROWS}}</tbody>
+    </table>
+  </div>
+
+  <footer>Report generated by <strong>gitstat</strong> on {{GENERATED_AT}}</footer>
+</div>
+</body>
+</html>
