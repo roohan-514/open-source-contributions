@@ -1,5 +1,7 @@
 # 🌍 Open Source Contributions
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub Repo](https://img.shields.io/badge/GitHub-open--source--contributions-181717?logo=github)](https://github.com/roohan-514/open-source-contributions)
@@ -10,6 +12,8 @@
 ---
 
 ## 📦 What's Inside
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 
 This repository serves as both a **portfolio** of OSS contribution practices and a **usable tool** for the community.
 
@@ -25,6 +29,8 @@ This repository serves as both a **portfolio** of OSS contribution practices and
 
 ## 🛠️ gitstat
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 **gitstat** is a command-line tool that takes a GitHub repository URL and generates a comprehensive, beautifully styled HTML report with:
 
 - ⭐ Stars, forks, open issues, watchers
@@ -37,11 +43,17 @@ This repository serves as both a **portfolio** of OSS contribution practices and
 
 ### Installation
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 ```bash
 # Via pip (once published)
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 pip install gitstat
 
 # Or install from source
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 git clone https://github.com/roohan-514/open-source-contributions.git
 cd open-source-contributions
 pip install -e .
@@ -49,23 +61,35 @@ pip install -e .
 
 ### Usage
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 ```bash
 # Basic usage
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 gitstat https://github.com/roohan-514/rag-chatbot-system
 
 # Specify output file
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 gitstat https://github.com/roohan-514/rag-chatbot-system -o my-report.html
 
 # Verbose mode (see API calls)
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 gitstat https://github.com/roohan-514/rag-chatbot-system --verbose
 
 # Markdown format
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 gitstat https://github.com/roohan-514/rag-chatbot-system -f markdown
 ```
 
 ---
 
 ## 🌱 My OSS Journey
+
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 
 Open source software is the backbone of the modern internet. My journey began by using open source tools, then fixing small issues, and eventually building and sharing tools of my own.
 
@@ -83,6 +107,8 @@ Open source software is the backbone of the modern internet. My journey began by
 
 ## ❤️ Why Contribute to OSS?
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 | Reason | Impact |
 |--------|--------|
 | **Skill growth** | Read, write, and review production-grade code |
@@ -95,13 +121,18 @@ Open source software is the backbone of the modern internet. My journey began by
 
 ## ⚖️ License
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
 
 ---
 
 ## 📬 Get in Touch
 
+[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+
 - GitHub: [@roohan-514](https://github.com/roohan-514)
 - Email: roohan.rizvi@gmail.com
 
 *Built with ❤️ for the open source community.*
+
