@@ -1,59 +1,40 @@
-# 🌍 Open Source Contributions
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python" alt="Python"/>
+  <img src="https://img.shields.io/badge/CLI-gitstat-58a6ff?style=for-the-badge" alt="gitstat"/>
+  <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT"/>
+  <img src="https://img.shields.io/github/stars/roohan-514/open-source-contributions?style=for-the-badge" alt="Stars"/>
+  <img src="https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge" alt="PRs Welcome"/>
+</p>
 
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+<h1 align="center">Open Source Contributions</h1>
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://python.org)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-open--source--contributions-181717?logo=github)](https://github.com/roohan-514/open-source-contributions)
-[![CLI Tool](https://img.shields.io/badge/Tool-gitstat-58a6ff)](#-gitstat)
-
-> A practical demonstration of open source contribution skills — featuring **gitstat**, a CLI tool that generates beautiful GitHub repository analytics reports.
-
----
-
-## 📦 What's Inside
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-
-This repository serves as both a **portfolio** of OSS contribution practices and a **usable tool** for the community.
-
-| Component | Description |
-|-----------|-------------|
-| `gitstat/` | Python CLI tool — analyze any public GitHub repo and get a rich HTML report |
-| `CONTRIBUTING.md` | Well-structured contribution guidelines for this project |
-| `CODE_OF_CONDUCT.md` | Standard Contributor Covenant |
-| `LICENSE` | MIT License |
-| `setup.py` | PyPI-ready package configuration |
+<p align="center">
+  <em>A CLI tool and OSS portfolio — featuring <b>gitstat</b>, a utility that turns any GitHub repo into a beautiful analytics report.</em>
+</p>
 
 ---
 
-## 🛠️ gitstat
+## gitstat
 
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+**gitstat** is a zero-dependency Python CLI that takes a GitHub repo URL and generates a comprehensive HTML (or Markdown) analytics report. No API token required for public repos.
 
-**gitstat** is a command-line tool that takes a GitHub repository URL and generates a comprehensive, beautifully styled HTML report with:
+### Features
 
-- ⭐ Stars, forks, open issues, watchers
-- 🧑‍💻 Top contributors with avatar and commit counts
-- 📝 Recent commits (SHA, author, message, date)
-- 📊 Language breakdown with visual bars
-- 📋 Repository metadata (license, branch, dates, size)
-- 🏷️ Repository topics
-- 🚀 Rate-limit aware GitHub API calls with caching
+- Stars, forks, open issues, watchers at a glance
+- Top contributors with avatars and commit counts
+- Recent commits with SHA, author, message, and date
+- Language breakdown with visual bars
+- Repo metadata: license, branch, dates, size
+- Rate-limit aware API calls with caching
+- HTML reports with clean, responsive design
+- Markdown reports for embedding in docs
 
-### Installation
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+### Quick Start
 
 ```bash
-# Via pip (once published)
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 pip install gitstat
 
-# Or install from source
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+# Or from source
 git clone https://github.com/roohan-514/open-source-contributions.git
 cd open-source-contributions
 pip install -e .
@@ -61,78 +42,50 @@ pip install -e .
 
 ### Usage
 
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-
 ```bash
-# Basic usage
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+# Basic
 gitstat https://github.com/roohan-514/rag-chatbot-system
 
-# Specify output file
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-gitstat https://github.com/roohan-514/rag-chatbot-system -o my-report.html
-
-# Verbose mode (see API calls)
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-gitstat https://github.com/roohan-514/rag-chatbot-system --verbose
+# Custom output
+gitstat https://github.com/roohan-514/rag-chatbot-system -o report.html
 
 # Markdown format
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
 gitstat https://github.com/roohan-514/rag-chatbot-system -f markdown
+
+# Verbose mode
+gitstat https://github.com/roohan-514/rag-chatbot-system --verbose
 ```
 
----
+### Sample Output
 
-## 🌱 My OSS Journey
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-
-Open source software is the backbone of the modern internet. My journey began by using open source tools, then fixing small issues, and eventually building and sharing tools of my own.
-
-**Why I contribute:**
-- **Learn from the best** — reading high-quality code sharpens my skills
-- **Give back** — OSS tools power my projects every day
-- **Build reputation** — a public GitHub footprint demonstrates real ability
-- **Collaborate globally** — work with developers from every time zone
-
-**Projects I've contributed to:**
-- [rag-chatbot-system](https://github.com/roohan-514/rag-chatbot-system) — RAG-based document Q&A with LangChain
-- This repository — building and documenting OSS best practices
+The HTML report includes:
+- Repository overview with stats cards
+- Top contributors section with profile links
+- Commit history table
+- Language distribution bar chart (pure CSS)
+- Full metadata footer
 
 ---
 
-## ❤️ Why Contribute to OSS?
+## Why This Repo Exists
 
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+I built **gitstat** to scratch my own itch — I wanted a quick way to generate shareable repo analytics without opening the GitHub UI. Then I turned it into a showcase of OSS contribution practices.
 
-| Reason | Impact |
-|--------|--------|
-| **Skill growth** | Read, write, and review production-grade code |
-| **Portfolio** | Tangible proof of your abilities for employers |
-| **Community** | Join a global network of passionate developers |
-| **Impact** | Your code helps thousands (or millions!) of users |
-| **Reciprocity** | The software you love exists because others contributed |
-
----
-
-## ⚖️ License
-
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
-
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+| Resource | What it covers |
+|----------|---------------|
+| `gitstat/` | The CLI tool — installable, documented, tested |
+| `CONTRIBUTING.md` | Real contribution guide for this project |
+| `CODE_OF_CONDUCT.md` | Standard Contributor Covenant |
+| `setup.py` | PyPI-ready packaging |
 
 ---
 
-## 📬 Get in Touch
+## Contributing
 
-[![Discussions](https://img.shields.io/badge/Discussions-Join%20the%20conversation-008AD7?style=flat-square&logo=github)](https://github.com/roohan-514/open-source-contributions/discussions)
+Bug reports, feature requests, and PRs are welcome. Check [CONTRIBUTING.md](CONTRIBUTING.md) to get started.
 
-- GitHub: [@roohan-514](https://github.com/roohan-514)
-- Email: roohan.rizvi@gmail.com
+---
 
-*Built with ❤️ for the open source community.*
+## License
 
+MIT
